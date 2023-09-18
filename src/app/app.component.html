@@ -1,0 +1,11 @@
+<div class="w-[800px] h-[400px] flex justify-center items-center">
+  <div (click)="btnClick()" class="cursor-pointer w-16 h-10 bg-slate-600 rounded-md" cdkOverlayOrigin #origin="cdkOverlayOrigin">dianwo</div>
+
+  <ng-template cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="origin"
+    [cdkConnectedOverlayOpen]="isOpen"
+    [cdkConnectedOverlayPositions]="positions"
+    >
+    <app-popconfirm />
+  </ng-template>
+</div>
